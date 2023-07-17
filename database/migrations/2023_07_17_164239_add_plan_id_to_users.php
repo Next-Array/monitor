@@ -16,6 +16,7 @@ return new class extends Migration {
             //
             $table
                 ->foreignId('plan_id')
+                ->after('email')
                 ->constrained()
                 ->onDelete('cascade');
         });
