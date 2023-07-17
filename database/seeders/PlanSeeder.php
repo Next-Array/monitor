@@ -31,7 +31,7 @@ class PlanSeeder extends Seeder
             'description' =>
                 'This is a premium plan which includes 15 monitors with interval 1 minute',
             'interval' => 60,
-            'monitors' => 15,
+            'monitors' => 500,
             'cost' => 5,
         ]);
     }

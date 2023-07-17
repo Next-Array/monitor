@@ -45,7 +45,8 @@
                         </div>
                         <div style="display: flex; flex-direction: column;">
                             <span class="text-gray-900 dark:text-gray-400">Total monitors</span>
-                            <p>{{ Auth::user()->plan->monitors }}</p>
+                            <p>@if(Auth::user()->plan->monitors > 499) Unlimited @else {{ Auth::user()->plan->monitors
+                                }} @endif</p>
                         </div>
 
                     </div>
