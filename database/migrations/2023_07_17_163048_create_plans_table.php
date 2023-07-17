@@ -18,6 +18,7 @@ return new class extends Migration {
             $table->text('description');
             $table->integer('interval');
             $table->integer('monitors');
+            $table->integer('cost')->default(0);
             $table->timestamps();
         });
     }
