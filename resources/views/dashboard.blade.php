@@ -5,11 +5,50 @@
         </h2>
     </x-slot>
 
-    <div class="py-12">
-        <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
+    <div style="display: grid; grid-template-columns: 30fr 60fr; width: 130rem; gap: 2rem;">
+        <div class="mt-6">
             <div class="bg-white dark:bg-gray-800 overflow-hidden shadow-sm sm:rounded-lg">
                 <div class="p-6 text-gray-900 dark:text-gray-100">
                     {{ __("You do not have a monitor yet") }}
+                </div>
+            </div>
+        </div>
+
+        <div class="mt-6">
+            <div class="bg-white dark:bg-gray-800 overflow-hidden shadow-sm sm:rounded-lg">
+                <div class="p-6 text-gray-900 dark:text-gray-100" style="border-bottom: 2px solid #ffffffbd;">
+                    <span>Account Overview</span>
+                </div>
+                <div class="p-4 text-gray-900 dark:text-gray-100"
+                    style="display: grid; grid-template-columns: 60fr 30fr; gap: 1rem; ">
+                    <div style="display: flex; flex-direction: column; gap: 2rem;">
+                        <div style="display: flex; flex-direction: column;">
+                            <span class="text-gray-900 dark:text-gray-400">Name</span>
+                            <p>{{ Auth::user()->name }}</p>
+                        </div>
+                        <div style="display: flex; flex-direction: column;">
+                            <span class="text-gray-900 dark:text-gray-400">Email</span>
+                            <p>{{ Auth::user()->email }}</p>
+                        </div>
+                        <div style="display: flex; flex-direction: column;">
+                            <span class="text-gray-900 dark:text-gray-400">Account Credit</span>
+                            {{-- <p>{{ Auth::user()->credit }}</p> --}}
+                            <p>$0.00</p>
+                        </div>
+                    </div>
+                    <div style="display: flex; flex-direction: column; gap: 2rem;">
+                        <div style="display: flex; flex-direction: column;">
+                            <span class="text-gray-900 dark:text-gray-400">Active plan</span>
+                            <p>{{ Auth::user()->plan->name }} </p>
+                            <span class="text-gray-900 dark:text-gray-400">{{
+                                Auth::user()->plan->description }}</span>
+                        </div>
+                        <div style="display: flex; flex-direction: column;">
+                            <span class="text-gray-900 dark:text-gray-400">Total monitors</span>
+                            <p>{{ Auth::user()->plan->monitors }}</p>
+                        </div>
+
+                    </div>
                 </div>
             </div>
         </div>
