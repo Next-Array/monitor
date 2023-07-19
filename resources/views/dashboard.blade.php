@@ -18,37 +18,39 @@
             <div class="bg-white dark:bg-gray-800 overflow-hidden shadow-sm sm:rounded-lg">
                 <div class="p-6 text-gray-900 dark:text-gray-100" style="border-bottom: 2px solid #ffffffbd;">
                     <span>Account Overview</span>
-                </div>
-                <div class="p-4 text-gray-900 dark:text-gray-100"
-                    style="display: grid; grid-template-columns: 60fr 30fr; gap: 1rem; ">
-                    <div style="display: flex; flex-direction: column; gap: 2rem;">
-                        <div style="display: flex; flex-direction: column;">
-                            <span class="text-gray-900 dark:text-gray-400">Name</span>
-                            <p>{{ Auth::user()->name }}</p>
-                        </div>
-                        <div style="display: flex; flex-direction: column;">
-                            <span class="text-gray-900 dark:text-gray-400">Email</span>
-                            <p>{{ Auth::user()->email }}</p>
-                        </div>
-                        <div style="display: flex; flex-direction: column;">
-                            <span class="text-gray-900 dark:text-gray-400">Account Credit</span>
-                            {{-- <p>{{ Auth::user()->credit }}</p> --}}
-                            <p>$0.00</p>
-                        </div>
-                    </div>
-                    <div style="display: flex; flex-direction: column; gap: 2rem;">
-                        <div style="display: flex; flex-direction: column;">
-                            <span class="text-gray-900 dark:text-gray-400">Active plan</span>
-                            <p>{{ Auth::user()->plan->name }} </p>
-                            <span class="text-gray-900 dark:text-gray-400">{{
-                                Auth::user()->plan->description }}</span>
-                        </div>
-                        <div style="display: flex; flex-direction: column;">
-                            <span class="text-gray-900 dark:text-gray-400">Total monitors</span>
-                            <p>@if(Auth::user()->plan->monitors > 499) Unlimited @else {{ Auth::user()->plan->monitors
-                                }} @endif</p>
-                        </div>
 
+                    <div class="p-4 text-gray-900 dark:text-gray-100"
+                        style="display: grid; grid-template-columns: 60fr 30fr; gap: 1rem; ">
+                        <div style="display: flex; flex-direction: column; gap: 2rem;">
+                            <div style="display: flex; flex-direction: column;">
+                                <span class="text-gray-900 dark:text-gray-400">Name</span>
+                                <p>{{ auth()->user()->name }}</p>
+                            </div>
+                            <div style="display: flex; flex-direction: column;">
+                                <span class="text-gray-900 dark:text-gray-400">Email</span>
+                                <p>{{ auth()->user()->email }}</p>
+                            </div>
+                            <div style="display: flex; flex-direction: column;">
+                                <span class="text-gray-900 dark:text-gray-400">Account Credit</span>
+                                {{-- <p>{{ auth()->user()->credit }}</p> --}}
+                                <p>$0.00</p>
+                            </div>
+                        </div>
+                        <div style="display: flex; flex-direction: column; gap: 2rem;">
+                            <div style="display: flex; flex-direction: column;">
+                                <span class="text-gray-900 dark:text-gray-400">Active plan</span>
+                                <p>{{ auth()->user()->plan->name }} </p>
+                                <span class="text-gray-900 dark:text-gray-400">{{
+                                    auth()->user()->plan->description }}</span>
+                            </div>
+                            <div style="display: flex; flex-direction: column;">
+                                <span class="text-gray-900 dark:text-gray-400">Total monitors</span>
+                                <p>@if(auth()->user()->plan->monitors > 499) Unlimited @else {{
+                                    auth()->user()->plan->monitors
+                                    }} @endif</p>
+                            </div>
+
+                        </div>
                     </div>
                 </div>
             </div>
