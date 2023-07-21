@@ -14,7 +14,7 @@ class NetworkController extends Controller
     public function index()
     {
         //
-        return view('new.index');
+        return view('new.index', ['user' => auth()->user()]);
     }
 
     /**

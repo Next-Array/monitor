@@ -5,18 +5,14 @@
         </h2>
     </x-slot>
 
-    <h1 style="font-size: 2.4em; color: white;">Add a new monitor</h1>
+
     <div style="display: grid; grid-template-columns: 30fr 60fr; gap: 2rem;">
         <div>
             <div class="bg-white dark:bg-gray-800 overflow-hidden shadow-sm sm:rounded-lg">
+
                 <div class="p-6 text-gray-900 dark:text-gray-100">
                     <div style="display: flex; flex-direction: column; gap: 1rem;">
-                        {{ __("You do not have a monitor yet") }}
-                        <a href="{{route('new')}}">
-                            <x-primary-button style="width: 100%">
-                                <span href="{{route('new')}}" style="width: 100%">Add a new monitor</span>
-                            </x-primary-button>
-                        </a>
+                        @include('new.partials.monitor-type-form')
                     </div>
                 </div>
             </div>
