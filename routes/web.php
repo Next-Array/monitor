@@ -39,6 +39,9 @@ Route::middleware('auth')->group(function () {
 
 Route::middleware('auth')->group(function () {
     Route::get('/new', [NetworkController::class, 'index'])->name('new');
+    Route::post('/new/show', [NetworkController::class, 'show'])->name(
+        'new.show'
+    );
 });
 
 require __DIR__ . '/auth.php';

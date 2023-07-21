@@ -44,9 +44,16 @@ class NetworkController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show($id)
+    public function show(Request $request)
     {
         //
+        $this->validate($request, [
+            'type' => 'sometimes|in:website,ping',
+        ]);
+
+        if ($request->has('type')) {
+            dd('hi');
+        }
     }
 
     /**
