@@ -30,7 +30,8 @@
             @endif
 
             <!-- Page Content -->
-            <main style="display: flex; margin: 0 auto; justify-content: center; gap: 1rem; max-width: 80rem;">
+            <main
+                style="display: flex; flex-direction: column; margin: 0 auto; justify-content: center; align-items: center; gap: 1rem; max-width: 80rem; margin-top: 1rem;">
                 {{ $slot }}
             </main>
         </div>

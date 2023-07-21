@@ -5,8 +5,8 @@
         </h2>
     </x-slot>
 
-    <div style="display: grid; grid-template-columns: 30fr 60fr; width: 130rem; gap: 2rem;">
-        <div class="mt-6">
+    <div style="display: grid; grid-template-columns: 30fr 60fr;  gap: 2rem;">
+        <div>
             <div class="bg-white dark:bg-gray-800 overflow-hidden shadow-sm sm:rounded-lg">
                 <div class="p-6 text-gray-900 dark:text-gray-100">
                     <div style="display: flex; flex-direction: column; gap: 1rem;">
@@ -21,7 +21,7 @@
             </div>
         </div>
 
-        <div class="mt-6">
+        <div>
             <div class="bg-white dark:bg-gray-800 overflow-hidden shadow-sm sm:rounded-lg">
                 <div class="p-6 text-gray-900 dark:text-gray-100" style="border-bottom: 2px solid #ffffffbd;">
                     <span>Account Overview</span>
