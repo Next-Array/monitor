@@ -19,6 +19,7 @@ class CreateMonitorsTable extends Migration
             $table->increments('id');
             $table
                 ->foreignId('user_id')
+                ->default(1)
                 ->constrained()
                 ->onDelete('cascade');
 
