@@ -17,6 +17,11 @@ class CreateMonitorsTable extends Migration
     {
         Schema::create('monitors', function (Blueprint $table) {
             $table->increments('id');
+            $table
+                ->foreignId('user_id')
+                ->constrained()
+                ->onDelete('cascade');
+
             $table->string('url')->unique();
 
             $table->boolean('uptime_check_enabled')->default(true);
