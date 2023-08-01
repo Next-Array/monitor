@@ -3,6 +3,7 @@
 namespace App\Models;
 
 use App\Models\Plan;
+use App\Models\Monitor;
 use Laravel\Sanctum\HasApiTokens;
 use Illuminate\Notifications\Notifiable;
 use Illuminate\Contracts\Auth\MustVerifyEmail;
@@ -40,5 +41,10 @@ class User extends Authenticatable implements MustVerifyEmail
     public function plan()
     {
         return $this->belongsTo(Plan::class);
+    }
+
+    public function monitors()
+    {
+        return $this->hasMany(Monitor::class);
     }
 }
