@@ -6,7 +6,7 @@ use Illuminate\Database\Migrations\Migration;
 use Spatie\UptimeMonitor\Models\Enums\UptimeStatus;
 use Spatie\UptimeMonitor\Models\Enums\CertificateStatus;
 
-class CreateMonitorsTable extends Migration
+class CreateWebsiteMonitorsTable extends Migration
 {
     /**
      * Run the migrations.
@@ -15,7 +15,7 @@ class CreateMonitorsTable extends Migration
      */
     public function up()
     {
-        Schema::create('monitors', function (Blueprint $table) {
+        Schema::create('website-monitors', function (Blueprint $table) {
             $table->increments('id');
             $table
                 ->foreignId('user_id')
@@ -62,6 +62,6 @@ class CreateMonitorsTable extends Migration
      */
     public function down()
     {
-        Schema::drop('monitors');
+        Schema::drop('website-monitors');
     }
 }
