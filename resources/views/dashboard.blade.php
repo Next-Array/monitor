@@ -24,8 +24,9 @@
                 <div class="p-2 text-gray-100 dark:text-gray-900 flex"
                     style="background-color: #e5e7ebe7; width: 100%; justify-content: center; align-items: center; gap: 1rem; text-align: center;">
                     <p style="white-space: nowrap;"><strong>Total Monitors</strong></p>
-                    <span href="{{route('new')}}" style="width: 100%">{{Auth::user()->monitors->count()}} /
-                        @if(Auth::user()->plan->monitors > 499) Unlimited @else {{ Auth::user()->plan->monitors
+                    <span href="{{route('new')}}" style="width: 100%">{{Auth::user()->website_monitors->count()}} /
+                        @if(Auth::user()->plan->website_monitors > 499) Unlimited @else {{
+                        Auth::user()->plan->website_monitors
                         }} @endif</span>
                 </div>
             </div>
@@ -62,7 +63,8 @@
                         </div>
                         <div style="display: flex; flex-direction: column;">
                             <span class="text-gray-900 dark:text-gray-400">Total monitors</span>
-                            <p>@if(Auth::user()->plan->monitors > 499) Unlimited @else {{ Auth::user()->plan->monitors
+                            <p>@if(Auth::user()->plan->website_monitors > 499) Unlimited @else {{
+                                Auth::user()->plan->website_monitors
                                 }} @endif</p>
                         </div>
 

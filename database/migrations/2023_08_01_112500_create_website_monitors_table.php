@@ -15,7 +15,7 @@ class CreateWebsiteMonitorsTable extends Migration
      */
     public function up()
     {
-        Schema::create('website-monitors', function (Blueprint $table) {
+        Schema::create('website_monitors', function (Blueprint $table) {
             $table->increments('id');
             $table
                 ->foreignId('user_id')
@@ -62,6 +62,6 @@ class CreateWebsiteMonitorsTable extends Migration
      */
     public function down()
     {
-        Schema::drop('website-monitors');
+        Schema::drop('website_monitors');
     }
 }
